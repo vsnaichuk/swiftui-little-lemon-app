@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Little Lemmon App
+//  Little Lemon App
 //
 //  Created by vsn on 15.03.2023.
 //

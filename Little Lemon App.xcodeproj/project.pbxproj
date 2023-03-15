@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63D3978129C2681E00234838 /* Little_Lemmon_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3978029C2681E00234838 /* Little_Lemmon_AppApp.swift */; };
+		63D3978129C2681E00234838 /* Little_Lemon_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3978029C2681E00234838 /* Little_Lemon_App.swift */; };
 		63D3978329C2681E00234838 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3978229C2681E00234838 /* ContentView.swift */; };
 		63D3978529C2681F00234838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D3978429C2681F00234838 /* Assets.xcassets */; };
 		63D3978829C2681F00234838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D3978729C2681F00234838 /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		63D3977D29C2681E00234838 /* Little Lemon App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63D3978029C2681E00234838 /* Little_Lemmon_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_Lemmon_AppApp.swift; sourceTree = "<group>"; };
+		63D3978029C2681E00234838 /* Little_Lemon_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_Lemon_App.swift; sourceTree = "<group>"; };
 		63D3978229C2681E00234838 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63D3978429C2681F00234838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D3978729C2681F00234838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		63D3977F29C2681E00234838 /* Little Lemon App */ = {
 			isa = PBXGroup;
 			children = (
-				63D3978029C2681E00234838 /* Little_Lemmon_AppApp.swift */,
+				63D3978029C2681E00234838 /* Little_Lemon_App.swift */,
 				63D3978229C2681E00234838 /* ContentView.swift */,
 				63D3978429C2681F00234838 /* Assets.xcassets */,
 				63D3978629C2681F00234838 /* Preview Content */,
@@ -83,7 +83,7 @@
 			dependencies = (
 			);
 			name = "Little Lemon App";
-			productName = "Little Lemmon App";
+			productName = "Little Lemon App";
 			productReference = 63D3977D29C2681E00234838 /* Little Lemon App.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D3978329C2681E00234838 /* ContentView.swift in Sources */,
-				63D3978129C2681E00234838 /* Little_Lemmon_AppApp.swift in Sources */,
+				63D3978129C2681E00234838 /* Little_Lemon_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
