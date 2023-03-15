@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/vsn/Dev/swiftui-little-lemon-app/Little Lemon App.xcodeproj">
    </FileRef>
 </Workspace>

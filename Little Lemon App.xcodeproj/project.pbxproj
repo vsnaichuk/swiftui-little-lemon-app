@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63D3977D29C2681E00234838 /* Little Lemmon App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemmon App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D3977D29C2681E00234838 /* Little Lemon App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3978029C2681E00234838 /* Little_Lemmon_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_Lemmon_AppApp.swift; sourceTree = "<group>"; };
 		63D3978229C2681E00234838 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63D3978429C2681F00234838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		63D3977429C2681D00234838 = {
 			isa = PBXGroup;
 			children = (
-				63D3977F29C2681E00234838 /* Little Lemmon App */,
+				63D3977F29C2681E00234838 /* Little Lemon App */,
 				63D3977E29C2681E00234838 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,12 +43,12 @@
 		63D3977E29C2681E00234838 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63D3977D29C2681E00234838 /* Little Lemmon App.app */,
+				63D3977D29C2681E00234838 /* Little Lemon App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63D3977F29C2681E00234838 /* Little Lemmon App */ = {
+		63D3977F29C2681E00234838 /* Little Lemon App */ = {
 			isa = PBXGroup;
 			children = (
 				63D3978029C2681E00234838 /* Little_Lemmon_AppApp.swift */,
@@ -56,7 +56,7 @@
 				63D3978429C2681F00234838 /* Assets.xcassets */,
 				63D3978629C2681F00234838 /* Preview Content */,
 			);
-			path = "Little Lemmon App";
+			path = "Little Lemon App";
 			sourceTree = "<group>";
 		};
 		63D3978629C2681F00234838 /* Preview Content */ = {
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63D3977C29C2681E00234838 /* Little Lemmon App */ = {
+		63D3977C29C2681E00234838 /* Little Lemon App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63D3978B29C2681F00234838 /* Build configuration list for PBXNativeTarget "Little Lemmon App" */;
+			buildConfigurationList = 63D3978B29C2681F00234838 /* Build configuration list for PBXNativeTarget "Little Lemon App" */;
 			buildPhases = (
 				63D3977929C2681E00234838 /* Sources */,
 				63D3977A29C2681E00234838 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Little Lemmon App";
+			name = "Little Lemon App";
 			productName = "Little Lemmon App";
-			productReference = 63D3977D29C2681E00234838 /* Little Lemmon App.app */;
+			productReference = 63D3977D29C2681E00234838 /* Little Lemon App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63D3977829C2681D00234838 /* Build configuration list for PBXProject "Little Lemmon App" */;
+			buildConfigurationList = 63D3977829C2681D00234838 /* Build configuration list for PBXProject "Little Lemon App" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63D3977C29C2681E00234838 /* Little Lemmon App */,
+				63D3977C29C2681E00234838 /* Little Lemon App */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +266,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Little Lemmon App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Little Lemon App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -279,7 +279,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vsnaichuk.Little-Lemmon-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vsnaichuk.Little-Lemon-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -294,7 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Little Lemmon App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Little Lemon App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vsnaichuk.Little-Lemmon-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vsnaichuk.Little-Lemon-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63D3977829C2681D00234838 /* Build configuration list for PBXProject "Little Lemmon App" */ = {
+		63D3977829C2681D00234838 /* Build configuration list for PBXProject "Little Lemon App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63D3978929C2681F00234838 /* Debug */,
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63D3978B29C2681F00234838 /* Build configuration list for PBXNativeTarget "Little Lemmon App" */ = {
+		63D3978B29C2681F00234838 /* Build configuration list for PBXNativeTarget "Little Lemon App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63D3978C29C2681F00234838 /* Debug */,
