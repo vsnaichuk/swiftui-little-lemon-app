@@ -1,5 +1,5 @@
 //
-//  Little_Lemon_App.swift
+//  LittleLemonApp.swift
 //  Little Lemon App
 //
 //  Created by vsn on 15.03.2023.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Little_Lemon_App: App {
+struct LittleLemonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsView()
         }
     }
 }
