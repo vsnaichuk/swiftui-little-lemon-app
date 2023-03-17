@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LocationsView: View {
-    
     @EnvironmentObject var model:Model
     
     var body: some View {
@@ -26,7 +25,7 @@ struct LocationsView: View {
             NavigationView {
                 List(model.restaurants, id: \.self) {
                     restaurant in NavigationLink(destination: ReservationFormView()) {
-                        RestaurantView()
+                        RestaurantView(restaurant)
                     }
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
