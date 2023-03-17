@@ -11,6 +11,6 @@ Final app for the course "Create the User Interface with SwiftUI" (Meta iOS Deve
 - [x] Was the Text element displaying "Reservation Details" or "Select a location" working correctly?
 - [x] Was the NavigationLink embedded correctly in the List?
 - [x] Was the List showing the different restaurant locations created correctly?
-- [ ] Was the TextField for the party number input validated correctly?
-- [ ] Was the form validation function added correctly to the button?
-- [ ] Was the error alert added correctly to the view?
+- [x] Was the TextField for the party number input validated correctly?
+- [x] Was the form validation function added correctly to the button?
+- [x] Was the error alert added correctly to the view?
