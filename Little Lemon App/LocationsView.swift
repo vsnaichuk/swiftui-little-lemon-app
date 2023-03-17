@@ -17,14 +17,14 @@ struct LocationsView: View {
             Text(model.displayingReservationForm ? "Reservation Details" : "Select a location")
                 .padding(.horizontal, 40)
                 .padding(.vertical, 8)
-                .background(Color.gray.opacity(0.2))
+                .background(.gray.opacity(0.2))
                 .cornerRadius(20)
             
             Spacer(minLength: 20)
             
             NavigationView {
                 List(model.restaurants, id: \.self) {
-                    restaurant in NavigationLink(destination: ReservationFormView()) {
+                    restaurant in NavigationLink(destination: ReservationFormView(restaurant)) {
                         RestaurantView(restaurant)
                     }
                     .navigationBarTitle("")
