@@ -20,6 +20,20 @@ struct ReservationFormView: View {
     @State var customerName = ""
     @State var customerPhoneNumber = ""
     @State var customerEmail = ""
+    
+    // this environment variable stores the presentation mode status
+    // of this view. This will be used to dismiss this view when
+    // the user taps on the RESERVE
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    // stores a temporary reservation used by this view
+    @State private var temporaryReservation = Reservation()
+    
+    // this flag will trigger .onChange
+    // this is necessary because due to to a SwiftUI limitation, we cannot change the model
+    // values from withing the view itself, as it is being drawn (inside the button)
+    // so, this flag will defer the change
+    @State var mustChangeReservation = false
 
     init(_ restaurant: RestaurantLocation) {
         self.restaurant = restaurant
@@ -89,7 +103,7 @@ struct ReservationFormView: View {
                 .padding(.vertical, 20)
                 
                 Button("CONFIRM RESERVATION", action: {
-                    // TODO: Add form validation
+                    validateForm()
                 })
                 .padding(.vertical, 10)
                 .padding(.horizontal, 30)
@@ -97,7 +111,26 @@ struct ReservationFormView: View {
                 .background(.blue)
                 .cornerRadius(20)
             }
+            
+            // This is a hack, to bring the content up.
+            // try to comment this line and see what happens.
+            // TODO: Find a better solution
+            .padding(.top, -40)
+            
+            // makes the form background invisible
+            // the original color is gray
             .scrollContentBackground(.hidden)
+            
+            .onChange(of: mustChangeReservation) { _ in
+                model.reservation = temporaryReservation
+            }
+            
+            // Alert with mistake form
+            .alert("Error", isPresented: $showFormInvalidMessage, actions: {
+                Button("OK", role: .cancel) { }
+            }, message: {
+                Text(self.errorMessage)
+            })
         }
         .onAppear {
             model.displayingReservationForm = true
@@ -105,6 +138,75 @@ struct ReservationFormView: View {
         .onDisappear {
             model.displayingReservationForm = false
         }
+    }
+    
+    private func validateForm() {
+        // customerName must contain just letters
+        let nameIsValid = isValid(name: customerName)
+        let emailIsValid = isValid(email: customerEmail)
+        
+        guard nameIsValid && emailIsValid
+        else {
+            var invalidNameMessage = ""
+            if customerName.isEmpty || !isValid(name: customerName) {
+                invalidNameMessage = "Names can only contain letters and must have at least 3 characters\n\n"
+            }
+            
+            var invalidPhoneMessage = ""
+            // Checking for a phone number
+            if customerPhoneNumber.isEmpty {
+                invalidPhoneMessage = "The phone number cannot be blank.\n\n"
+            }
+            
+            var invalidEmailMessage = ""
+            if !customerEmail.isEmpty || !isValid(email: customerEmail) {
+                invalidEmailMessage = "The e-mail is invalid and cannot be blank."
+            }
+            
+            self.errorMessage = "Found these errors in the form:\n\n \(invalidNameMessage)\(invalidPhoneMessage)\(invalidEmailMessage)"
+            
+            showFormInvalidMessage.toggle()
+            return
+        }
+        
+        // form is valid, proceed
+        
+        // create new temporary reservation
+        let temporaryReservation = Reservation(restaurant:restaurant,
+                                               customerName: customerName,
+                                               customerEmail: customerEmail,
+                                               customerPhoneNumber: customerPhoneNumber,
+                                               reservationDate:reservationDate,
+                                               party:party,
+                                               specialRequests:specialRequests)
+        
+        // Store the temporary reservation locally
+        self.temporaryReservation = temporaryReservation
+        
+        // set the flag to defer changing to the model (see .onChange)
+        self.mustChangeReservation.toggle()
+        
+        // dismiss this view
+        self.presentationMode.wrappedValue.dismiss()
+    }
+    
+    func isValid(name: String) -> Bool {
+        guard !name.isEmpty,
+              name.count > 2
+        else { return false }
+        for chr in name {
+            if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") && !(chr == " ") ) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func isValid(email: String) -> Bool {
+        guard !email.isEmpty else { return false }
+        let emailValidationRegex = "^[\\p{L}0-9!#$%&'*+\\/=?^_`{|}~-][\\p{L}0-9.!#$%&'*+\\/=?^_`{|}~-]{0,63}@[\\p{L}0-9-]+(?:\\.[\\p{L}0-9-]{2,7})*$"
+        let emailValidationPredicate = NSPredicate(format: "SELF MATCHES %@", emailValidationRegex)
+        return emailValidationPredicate.evaluate(with: email)
     }
 }
 
